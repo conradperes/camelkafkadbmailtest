@@ -1,0 +1,111 @@
+04-01-2020 14:34:25.674 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+04-01-2020 14:34:28.206 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+04-01-2020 14:34:28.254 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+04-01-2020 14:34:28.293 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+04-01-2020 14:34:28.293 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+04-01-2020 14:34:28.293 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+04-01-2020 14:34:28.316 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 79
+04-01-2020 14:34:28.317 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+04-01-2020 14:39:05.511 [Thread-4] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext.doClose - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@37271612: startup date [Mon Dec 30 21:49:42 BRST 2019]; root of context hierarchy
+04-01-2020 14:39:05.773 [Thread-4] INFO  o.s.c.s.DefaultLifecycleProcessor.stop - Stopping beans in phase 2147483647
+04-01-2020 14:39:05.779 [Thread-4] INFO  o.a.camel.spring.SpringCamelContext.doStop - Apache Camel 2.20.1 (CamelContext: camel-1) is shutting down
+04-01-2020 14:39:05.802 [Thread-4] INFO  o.a.c.impl.DefaultShutdownStrategy.doShutdown - Starting to graceful shutdown 2 routes (timeout 1 seconds)
+04-01-2020 14:39:05.838 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.c.component.kafka.KafkaConsumer.doStop - Stopping Kafka consumer on topic: inputItemTopic
+04-01-2020 14:39:06.837 [Thread-4] WARN  o.a.c.impl.DefaultShutdownStrategy.doShutdown - Timeout occurred during graceful shutdown. Forcing the routes to be shutdown now. Notice: some resources may still be running as graceful shutdown did not complete successfully.
+04-01-2020 14:39:06.837 [Camel (camel-1) thread #3 - ShutdownTask] WARN  o.a.c.i.DefaultExecutorServiceManager.doShutdown - Forcing shutdown of ExecutorService: org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@49bc71b4[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0][KafkaConsumer[inputItemTopic]] due interrupted.
+04-01-2020 14:39:06.839 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.c.component.kafka.KafkaConsumer.log - Interrupted while consuming inputItemTopic-Thread 0 from kafka topic. Caused by: [org.apache.kafka.common.errors.InterruptException - java.lang.InterruptedException]
+org.apache.kafka.common.errors.InterruptException: java.lang.InterruptedException
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.maybeThrowInterruptException(ConsumerNetworkClient.java:428)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:248)
+	at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:208)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.pollOnce(KafkaConsumer.java:1096)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1043)
+	at org.apache.camel.component.kafka.KafkaConsumer$KafkaFetchRecords.doRun(KafkaConsumer.java:225)
+	at org.apache.camel.component.kafka.KafkaConsumer$KafkaFetchRecords.run(KafkaConsumer.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException: null
+	... 12 common frames omitted
+04-01-2020 14:39:06.840 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.c.component.kafka.KafkaConsumer.doRun - Unsubscribing inputItemTopic-Thread 0 from topic inputItemTopic
+04-01-2020 14:39:06.844 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.c.i.DefaultExecutorServiceManager.doShutdown - Shutdown of ExecutorService: org.apache.camel.util.concurrent.RejectableThreadPoolExecutor@49bc71b4[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0][KafkaConsumer[inputItemTopic]] is shutdown: true and terminated: false took: 1.000 seconds.
+04-01-2020 14:39:06.850 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.AbstractCoordinator.closeHeartbeatThread - Interrupted while waiting for consumer heartbeat thread to close
+04-01-2020 14:39:06.851 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+04-01-2020 14:39:06.851 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+04-01-2020 14:39:06.851 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] ERROR o.a.k.clients.consumer.KafkaConsumer.close - Failed to close coordinator
+org.apache.kafka.common.errors.InterruptException: java.lang.InterruptedException
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.closeHeartbeatThread(AbstractCoordinator.java:344)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.close(AbstractCoordinator.java:691)
+	at org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.close(ConsumerCoordinator.java:503)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.close(KafkaConsumer.java:1605)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.close(KafkaConsumer.java:1573)
+	at org.apache.kafka.clients.consumer.KafkaConsumer.close(KafkaConsumer.java:1549)
+	at org.apache.camel.util.IOHelper.close(IOHelper.java:342)
+	at org.apache.camel.util.IOHelper.close(IOHelper.java:406)
+	at org.apache.camel.component.kafka.KafkaConsumer$KafkaFetchRecords.doRun(KafkaConsumer.java:308)
+	at org.apache.camel.component.kafka.KafkaConsumer$KafkaFetchRecords.run(KafkaConsumer.java:170)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.InterruptedException: null
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Thread.join(Thread.java:1252)
+	at java.lang.Thread.join(Thread.java:1326)
+	at org.apache.kafka.clients.consumer.internals.AbstractCoordinator.closeHeartbeatThread(AbstractCoordinator.java:341)
+	... 14 common frames omitted
+04-01-2020 14:39:06.856 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.c.impl.DefaultShutdownStrategy.run - Route: route1 shutdown complete, was consuming from: kafka://inputItemTopic?autoOffsetReset=earliest&brokers=localhost%3A9092&consumersCount=1&groupId=itemDev
+04-01-2020 14:39:06.864 [Thread-4] INFO  o.a.c.impl.DefaultShutdownStrategy.logInflightExchanges - There are 1 inflight exchanges:
+	InflightExchange: [exchangeId=ID-ConradMac-1577749787361-0-489, fromRouteId=healthRoute, routeId=healthRoute, nodeId=pollEnrich1, elapsed=0, duration=395840407]
+04-01-2020 14:39:06.864 [Thread-4] INFO  o.a.c.impl.DefaultShutdownStrategy.doShutdown - Graceful shutdown of 2 routes completed in 1 seconds
+04-01-2020 14:39:06.867 [Camel (camel-1) thread #3 - ShutdownTask] INFO  o.a.c.impl.DefaultShutdownStrategy.run - Route: healthRoute shutdown complete, was consuming from: timer://health?period=10s
+04-01-2020 14:39:06.902 [Thread-4] WARN  o.a.c.impl.DefaultInflightRepository.doStop - Shutting down while there are still 1 inflight exchanges.
+04-01-2020 14:39:06.918 [Thread-4] INFO  o.a.camel.spring.SpringCamelContext.doStop - Apache Camel 2.20.1 (CamelContext: camel-1) uptime 4 days 16 hours
+04-01-2020 14:39:06.918 [Thread-4] INFO  o.a.camel.spring.SpringCamelContext.doStop - Apache Camel 2.20.1 (CamelContext: camel-1) is shutdown in 1.139 seconds
+04-01-2020 14:39:06.919 [Thread-4] INFO  o.s.c.s.DefaultLifecycleProcessor.stop - Stopping beans in phase 0
+04-01-2020 14:39:06.930 [Thread-4] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+04-01-2020 14:39:06.931 [Thread-4] INFO  o.s.b.a.e.jmx.EndpointMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+04-01-2020 14:39:06.932 [Thread-4] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+04-01-2020 14:39:09.196 [Camel (camel-1) thread #2 - timer://health] INFO  o.a.c.httpclient.HttpMethodDirector.executeWithRetry - I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server localhost failed to respond
+04-01-2020 14:39:09.197 [Camel (camel-1) thread #2 - timer://health] INFO  o.a.c.httpclient.HttpMethodDirector.executeWithRetry - Retrying request
+04-01-2020 14:39:14.216 [Camel (camel-1) thread #2 - timer://health] WARN  o.a.c.component.timer.TimerConsumer.log - Error processing exchange. Exchange[ID-ConradMac-1577749787361-0-489]. Caused by: [org.apache.camel.CamelExchangeException - Error during poll. Exchange[ID-ConradMac-1577749787361-0-489]. Caused by: [org.apache.camel.RuntimeCamelException - java.net.SocketException: Connection reset]]
+org.apache.camel.CamelExchangeException: Error during poll. Exchange[ID-ConradMac-1577749787361-0-489]. Caused by: [org.apache.camel.RuntimeCamelException - java.net.SocketException: Connection reset]
+	at org.apache.camel.processor.PollEnricher.process(PollEnricher.java:250)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:197)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:79)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.apache.camel.RuntimeCamelException: java.net.SocketException: Connection reset
+	at org.apache.camel.component.http.HttpPollingConsumer.doReceive(HttpPollingConsumer.java:97)
+	at org.apache.camel.component.http.HttpPollingConsumer.receive(HttpPollingConsumer.java:48)
+	at org.apache.camel.processor.PollEnricher.process(PollEnricher.java:235)
+	... 12 common frames omitted
+Caused by: java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at org.apache.commons.httpclient.HttpParser.readRawLine(HttpParser.java:78)
+	at org.apache.commons.httpclient.HttpParser.readLine(HttpParser.java:106)
+	at org.apache.commons.httpclient.HttpConnection.readLine(HttpConnection.java:1116)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.readLine(MultiThreadedHttpConnectionManager.java:1413)
+	at org.apache.commons.httpclient.HttpMethodBase.readStatusLine(HttpMethodBase.java:1973)
+	at org.apache.commons.httpclient.HttpMethodBase.readResponse(HttpMethodBase.java:1735)
+	at org.apache.commons.httpclient.HttpMethodBase.execute(HttpMethodBase.java:1098)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:398)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at org.apache.camel.component.http.HttpPollingConsumer.doReceive(HttpPollingConsumer.java:70)
+	... 14 common frames omitted

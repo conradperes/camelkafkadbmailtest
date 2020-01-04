@@ -1,0 +1,655 @@
+31-12-2019 00:31:25.008 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 00:31:25.010 [Camel (camel-1) thread #2 - timer://health] INFO  o.a.c.httpclient.HttpMethodDirector.executeWithRetry - I/O exception (org.apache.commons.httpclient.NoHttpResponseException) caught when processing request: The server localhost failed to respond
+31-12-2019 00:31:27.105 [Camel (camel-1) thread #2 - timer://health] INFO  o.a.c.httpclient.HttpMethodDirector.executeWithRetry - Retrying request
+31-12-2019 00:31:27.110 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 00:31:27.111 [http-nio-8080-exec-3] WARN  o.s.b.a.health.MailHealthIndicator.health - Health check failed
+com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:382)
+	at org.springframework.boot.actuate.health.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:40)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:43)
+	at org.springframework.boot.actuate.health.CompositeHealthIndicator.health(CompositeHealthIndicator.java:68)
+	at org.springframework.boot.actuate.endpoint.HealthEndpoint.invoke(HealthEndpoint.java:85)
+	at org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.getCurrentHealth(HealthMvcEndpoint.java:177)
+	at org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.getHealth(HealthMvcEndpoint.java:166)
+	at org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(HealthMvcEndpoint.java:143)
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084)
+	... 76 common frames omitted
+31-12-2019 00:31:27.111 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 00:31:27.113 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 00:31:27.113 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 00:31:27.113 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 00:31:27.115 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"DOWN","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"DOWN","location":"smtp.gmail.com:587","error":"com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1"},"diskSpace":{"status":"UP","total":250790436864,"free":84295618560,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:31:27.116 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Exception Message isstatus component in the route is Down
+mail component in the route is Down
+
+31-12-2019 00:31:27.117 [Camel (camel-1) thread #2 - timer://health] INFO  com.learncamel.alert.MailProcessor.process - Error Message in MailProcessor : status component in the route is Down
+mail component in the route is Down
+
+31-12-2019 00:31:27.118 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 15
+31-12-2019 00:31:27.119 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 00:31:27.121 [Camel (camel-1) thread #2 - timer://health] ERROR o.a.c.processor.DefaultErrorHandler.log - Failed delivery for (MessageId: ID-ConradMac-1577749787361-0-380 on ExchangeId: ID-ConradMac-1577749787361-0-379). Exhausted after delivery attempt: 1 caught: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[healthRoute       ] [healthRoute       ] [timer://health?period=10s                                                     ] [      2114]
+[healthRoute       ] [choice1           ] [when[{header{header(env)} != mock}]choice[]                                   ] [      2110]
+[healthRoute       ] [pollEnrich1       ] [pollEnrich[constant{http://localhost:8080/health}]                            ] [      2110]
+[healthRoute       ] [process1          ] [Processor@0xbfc14b9                                                           ] [         2]
+[healthRoute       ] [choice3           ] [when[{header{header(error)} == true}]choice[]                                 ] [         0]
+[healthRoute       ] [choice2           ] [when[{header{header(env)} != mock}]choice[]                                   ] [         0]
+[healthRoute       ] [process2          ] [Processor@0x1416cf9f                                                          ] [         1]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:432)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296)
+	at com.learncamel.alert.MailProcessor.process(MailProcessor.java:40)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:197)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:79)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+	Suppressed: java.lang.Throwable: status component in the route is Down
+mail component in the route is Down
+
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at org.springframework.core.convert.support.ObjectToObjectConverter.convert(ObjectToObjectConverter.java:106)
+		at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:37)
+		at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:203)
+		at org.apache.camel.spring.boot.SpringTypeConverter.convertTo(SpringTypeConverter.java:62)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.doConvertTo(BaseTypeConverterRegistry.java:326)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.convertTo(BaseTypeConverterRegistry.java:141)
+		at org.apache.camel.util.ExchangeHelper.convertToType(ExchangeHelper.java:240)
+		at org.apache.camel.impl.DefaultExchange.getProperty(DefaultExchange.java:200)
+		at org.apache.camel.processor.RedeliveryErrorHandler.handleException(RedeliveryErrorHandler.java:862)
+		at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:445)
+		... 14 common frames omitted
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421)
+	... 19 common frames omitted
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084)
+	... 23 common frames omitted
+31-12-2019 00:31:27.123 [Camel (camel-1) thread #2 - timer://health] WARN  o.a.c.component.timer.TimerConsumer.log - Error processing exchange. Exchange[ID-ConradMac-1577749787361-0-379]. Caused by: [org.springframework.mail.MailSendException - Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com]
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:432)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296)
+	at com.learncamel.alert.MailProcessor.process(MailProcessor.java:40)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:197)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:79)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+	Suppressed: java.lang.Throwable: status component in the route is Down
+mail component in the route is Down
+
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at org.springframework.core.convert.support.ObjectToObjectConverter.convert(ObjectToObjectConverter.java:106)
+		at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:37)
+		at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:203)
+		at org.apache.camel.spring.boot.SpringTypeConverter.convertTo(SpringTypeConverter.java:62)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.doConvertTo(BaseTypeConverterRegistry.java:326)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.convertTo(BaseTypeConverterRegistry.java:141)
+		at org.apache.camel.util.ExchangeHelper.convertToType(ExchangeHelper.java:240)
+		at org.apache.camel.impl.DefaultExchange.getProperty(DefaultExchange.java:200)
+		at org.apache.camel.processor.RedeliveryErrorHandler.handleException(RedeliveryErrorHandler.java:862)
+		at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:445)
+		... 14 common frames omitted
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421)
+	... 19 common frames omitted
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084)
+	... 23 common frames omitted
+31-12-2019 00:31:35.014 [http-nio-8080-exec-4] WARN  o.s.b.a.health.MailHealthIndicator.health - Health check failed
+com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:382)
+	at org.springframework.boot.actuate.health.MailHealthIndicator.doHealthCheck(MailHealthIndicator.java:40)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:43)
+	at org.springframework.boot.actuate.health.CompositeHealthIndicator.health(CompositeHealthIndicator.java:68)
+	at org.springframework.boot.actuate.endpoint.HealthEndpoint.invoke(HealthEndpoint.java:85)
+	at org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.getCurrentHealth(HealthMvcEndpoint.java:177)
+	at org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.getHealth(HealthMvcEndpoint.java:166)
+	at org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(HealthMvcEndpoint.java:143)
+	at sun.reflect.GeneratedMethodAccessor65.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084)
+	... 76 common frames omitted
+31-12-2019 00:31:35.022 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"DOWN","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"DOWN","location":"smtp.gmail.com:587","error":"com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1"},"diskSpace":{"status":"UP","total":250790436864,"free":84289720320,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:31:35.023 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Exception Message isstatus component in the route is Down
+mail component in the route is Down
+
+31-12-2019 00:31:35.024 [Camel (camel-1) thread #2 - timer://health] INFO  com.learncamel.alert.MailProcessor.process - Error Message in MailProcessor : status component in the route is Down
+mail component in the route is Down
+
+31-12-2019 00:31:35.026 [Camel (camel-1) thread #2 - timer://health] ERROR o.a.c.processor.DefaultErrorHandler.log - Failed delivery for (MessageId: ID-ConradMac-1577749787361-0-382 on ExchangeId: ID-ConradMac-1577749787361-0-381). Exhausted after delivery attempt: 1 caught: org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com; message exceptions (1) are:
+Failed message 1: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+
+Message History
+---------------------------------------------------------------------------------------------------------------------------------------
+RouteId              ProcessorId          Processor                                                                        Elapsed (ms)
+[healthRoute       ] [healthRoute       ] [timer://health?period=10s                                                     ] [        14]
+[healthRoute       ] [choice1           ] [when[{header{header(env)} != mock}]choice[]                                   ] [        11]
+[healthRoute       ] [pollEnrich1       ] [pollEnrich[constant{http://localhost:8080/health}]                            ] [        11]
+[healthRoute       ] [process1          ] [Processor@0xbfc14b9                                                           ] [         2]
+[healthRoute       ] [choice3           ] [when[{header{header(error)} == true}]choice[]                                 ] [         0]
+[healthRoute       ] [choice2           ] [when[{header{header(env)} != mock}]choice[]                                   ] [         0]
+[healthRoute       ] [process2          ] [Processor@0x1416cf9f                                                          ] [         1]
+
+Stacktrace
+---------------------------------------------------------------------------------------------------------------------------------------
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:432)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296)
+	at com.learncamel.alert.MailProcessor.process(MailProcessor.java:40)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:197)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:79)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+	Suppressed: java.lang.Throwable: status component in the route is Down
+mail component in the route is Down
+
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at org.springframework.core.convert.support.ObjectToObjectConverter.convert(ObjectToObjectConverter.java:106)
+		at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:37)
+		at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:203)
+		at org.apache.camel.spring.boot.SpringTypeConverter.convertTo(SpringTypeConverter.java:62)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.doConvertTo(BaseTypeConverterRegistry.java:326)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.convertTo(BaseTypeConverterRegistry.java:141)
+		at org.apache.camel.util.ExchangeHelper.convertToType(ExchangeHelper.java:240)
+		at org.apache.camel.impl.DefaultExchange.getProperty(DefaultExchange.java:200)
+		at org.apache.camel.processor.RedeliveryErrorHandler.handleException(RedeliveryErrorHandler.java:862)
+		at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:445)
+		... 14 common frames omitted
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421)
+	... 19 common frames omitted
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084)
+	... 23 common frames omitted
+31-12-2019 00:31:35.027 [Camel (camel-1) thread #2 - timer://health] WARN  o.a.c.component.timer.TimerConsumer.log - Error processing exchange. Exchange[ID-ConradMac-1577749787361-0-381]. Caused by: [org.springframework.mail.MailSendException - Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com]
+org.springframework.mail.MailSendException: Mail server connection failed; nested exception is com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com. Failed messages: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:432)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:307)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:296)
+	at com.learncamel.alert.MailProcessor.process(MailProcessor.java:40)
+	at org.apache.camel.processor.DelegateSyncProcessor.process(DelegateSyncProcessor.java:63)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.ChoiceProcessor.process(ChoiceProcessor.java:117)
+	at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:548)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:138)
+	at org.apache.camel.processor.Pipeline.process(Pipeline.java:101)
+	at org.apache.camel.processor.CamelInternalProcessor.process(CamelInternalProcessor.java:201)
+	at org.apache.camel.component.timer.TimerConsumer.sendTimerExchange(TimerConsumer.java:197)
+	at org.apache.camel.component.timer.TimerConsumer$1.run(TimerConsumer.java:79)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+	Suppressed: java.lang.Throwable: status component in the route is Down
+mail component in the route is Down
+
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at org.springframework.core.convert.support.ObjectToObjectConverter.convert(ObjectToObjectConverter.java:106)
+		at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:37)
+		at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:203)
+		at org.apache.camel.spring.boot.SpringTypeConverter.convertTo(SpringTypeConverter.java:62)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.doConvertTo(BaseTypeConverterRegistry.java:326)
+		at org.apache.camel.impl.converter.BaseTypeConverterRegistry.convertTo(BaseTypeConverterRegistry.java:141)
+		at org.apache.camel.util.ExchangeHelper.convertToType(ExchangeHelper.java:240)
+		at org.apache.camel.impl.DefaultExchange.getProperty(DefaultExchange.java:200)
+		at org.apache.camel.processor.RedeliveryErrorHandler.handleException(RedeliveryErrorHandler.java:862)
+		at org.apache.camel.processor.RedeliveryErrorHandler.process(RedeliveryErrorHandler.java:445)
+		... 14 common frames omitted
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2118)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:712)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:501)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:421)
+	... 19 common frames omitted
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:331)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2084)
+	... 23 common frames omitted
+31-12-2019 00:31:56.025 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84291686400,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:31:59.074 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84291719168,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:32:12.933 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84246786048,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:33:01.987 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84167573504,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:33:03.995 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84160868352,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:33:30.922 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84073922560,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:33:34.411 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84064309248,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:33:47.794 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84045336576,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:33:56.812 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84031676416,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:34:04.259 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":84008005632,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:34:14.386 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83987005440,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:34:23.891 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83969507328,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:34:33.007 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83955191808,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:34:45.593 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83927175168,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:34:57.264 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83903320064,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:35:03.056 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83898757120,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:35:14.153 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83864338432,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:35:24.509 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83852451840,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:35:35.170 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83833548800,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:35:44.327 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83800485888,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:35:54.578 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83790266368,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:36:04.832 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83770925056,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:36:15.909 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83740377088,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:36:24.344 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83723808768,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:36:35.037 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83700490240,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:36:44.837 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83682459648,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:36:55.055 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83677728768,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:37:03.958 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83661479936,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:37:14.254 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83647860736,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:37:24.466 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83647877120,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:37:33.602 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83647926272,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:37:44.659 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83579772928,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:37:55.057 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83579772928,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:38:03.669 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83539841024,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:38:14.074 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83507642368,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:38:24.870 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83495915520,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:38:33.921 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83474804736,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:38:43.706 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83449421824,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:38:54.057 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83435806720,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:39:06.291 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83411177472,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:39:14.437 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83392593920,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:39:24.076 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83371802624,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:39:40.230 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83353640960,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:39:46.291 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83331158016,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:39:53.060 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83328163840,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:40:03.741 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83294420992,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:40:13.970 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83269136384,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:40:23.526 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83255259136,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:40:42.346 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83248254976,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:40:44.377 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83248254976,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:40:54.703 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83241525248,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:41:06.053 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83223793664,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 00:41:46.454 [Camel (camel-1) thread #2 - timer://health] INFO  c.l.processor.HealthCheckProcessor.process - Health String of the APP is{"status":"UP","camel":{"status":"UP","name":"camel-1","version":"2.20.1","contextStatus":"Started"},"camel-health-checks":{"status":"UP","route:healthRoute":"UP","route:route1":"UP"},"mail":{"status":"UP","location":"smtp.gmail.com:587"},"diskSpace":{"status":"UP","total":250790436864,"free":83163062272,"threshold":10485760},"db":{"status":"UP","database":"PostgreSQL","hello":1}}
+31-12-2019 02:14:03.310 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 02:14:03.638 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 02:14:03.684 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 02:14:03.692 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 02:14:03.693 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 02:14:03.693 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 02:14:03.809 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 17
+31-12-2019 02:14:03.810 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 04:07:58.095 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 04:07:58.176 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 04:07:59.494 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 04:07:59.552 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 04:07:59.552 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 04:07:59.553 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 04:08:09.068 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 19
+31-12-2019 04:08:09.070 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 05:57:27.006 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 05:57:28.734 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 05:57:28.808 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 05:57:28.820 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 05:57:28.821 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 05:57:28.821 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 05:57:28.828 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 21
+31-12-2019 05:57:28.828 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 07:47:03.008 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 07:47:03.123 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 07:47:04.508 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 07:47:04.508 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 07:47:04.508 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 07:47:04.509 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 07:47:04.515 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 23
+31-12-2019 07:47:04.516 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 09:27:39.011 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 09:27:40.960 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 09:27:41.004 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 09:27:41.021 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 09:27:41.024 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 09:27:41.024 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 09:27:41.035 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 25
+31-12-2019 09:27:41.036 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 10:45:01.806 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 10:45:01.939 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 10:45:01.940 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 10:45:01.940 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 10:45:01.942 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 10:45:01.942 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 10:45:01.949 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 27
+31-12-2019 10:45:01.949 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 13:01:08.010 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 13:01:09.778 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 13:01:09.794 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 13:01:09.797 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 13:01:09.798 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 13:01:09.798 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 13:01:09.806 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 29
+31-12-2019 13:01:09.807 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 15:16:41.009 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 15:16:42.399 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 15:16:42.776 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 15:16:42.903 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 15:16:42.904 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 15:16:42.904 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 15:16:42.910 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 31
+31-12-2019 15:16:42.910 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 16:01:08.010 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 16:01:08.670 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 16:01:10.055 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 16:01:10.056 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 16:01:10.087 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 16:01:10.087 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 16:01:10.090 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 33
+31-12-2019 16:01:10.091 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 17:01:08.009 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 17:01:08.574 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 17:01:08.575 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 17:01:09.885 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 17:01:09.886 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 17:01:09.886 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 17:01:09.933 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 35
+31-12-2019 17:01:09.935 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 19:12:42.009 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 19:12:43.455 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 19:12:44.223 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 19:12:44.246 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 19:12:44.246 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 19:12:44.246 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 19:12:44.250 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 37
+31-12-2019 19:12:44.257 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 20:01:08.009 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 20:01:09.813 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 20:01:09.842 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 20:01:09.842 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 20:01:09.842 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 20:01:09.843 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 20:01:09.846 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 39
+31-12-2019 20:01:09.859 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 21:01:08.009 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 21:01:09.309 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 21:01:09.935 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 21:01:09.977 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 21:01:09.978 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 21:01:09.978 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 21:01:09.982 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 41
+31-12-2019 21:01:09.982 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 23:15:10.003 [kafka-coordinator-heartbeat-thread | itemDev] INFO  o.a.k.c.c.i.AbstractCoordinator.coordinatorDead - Marking the coordinator localhost:9092 (id: 2147483647 rack: null) dead for group itemDev
+31-12-2019 23:15:11.693 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Discovered coordinator localhost:9092 (id: 2147483647 rack: null) for group itemDev.
+31-12-2019 23:15:11.748 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.onComplete - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 23:15:11.749 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] WARN  o.a.k.c.c.i.ConsumerCoordinator.maybeAutoCommitOffsetsSync - Auto-commit of offsets {inputItemTopic-0=OffsetAndMetadata{offset=5, metadata=''}, inputItemTopic-1=OffsetAndMetadata{offset=1, metadata=''}, inputItemTopic-2=OffsetAndMetadata{offset=4, metadata=''}} failed for group itemDev: Commit cannot be completed since the group has already rebalanced and assigned the partitions to another member. This means that the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time message processing. You can address this either by increasing the session timeout or by reducing the maximum size of batches returned in poll() with max.poll.records.
+31-12-2019 23:15:11.749 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinPrepare - Revoking previously assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev
+31-12-2019 23:15:11.750 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.sendJoinGroupRequest - (Re-)joining group itemDev
+31-12-2019 23:15:11.797 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.AbstractCoordinator.onSuccess - Successfully joined group itemDev with generation 43
+31-12-2019 23:15:11.797 [Camel (camel-1) thread #1 - KafkaConsumer[inputItemTopic]] INFO  o.a.k.c.c.i.ConsumerCoordinator.onJoinComplete - Setting newly assigned partitions [inputItemTopic-0, inputItemTopic-1, inputItemTopic-2] for group itemDev

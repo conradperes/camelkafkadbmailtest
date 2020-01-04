@@ -40,7 +40,7 @@ public class SimpleCamelRoute extends RouteBuilder{
 
 
         from("{{fromRoute}}")
-                    .log("Current Environment is "+ environment.getProperty("message"))
+                    .log("REad message from Kafka "+ environment.getProperty("message"))
                 .to("{{toRoute}}");
 
         }

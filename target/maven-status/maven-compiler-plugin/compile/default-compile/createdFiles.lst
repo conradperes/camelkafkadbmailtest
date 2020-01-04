@@ -1,0 +1,8 @@
+com/learncamel/config/DBConfig.class
+com/learncamel/KafkaCamelSpringApplication.class
+com/learncamel/routes/SimpleCamelRoute.class
+com/learncamel/alert/MailProcessor.class
+com/learncamel/exception/DataException.class
+com/learncamel/routes/HealthCheckRoute.class
+com/learncamel/processor/HealthCheckProcessor$1.class
+com/learncamel/processor/HealthCheckProcessor.class

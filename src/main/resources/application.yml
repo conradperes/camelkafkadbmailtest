@@ -23,18 +23,16 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: xyz@gmail.com
-    password:
+    username: integrationmachinelearning@gmail.com
+    password: jqpuqvvlnkducutz
     properties.mail.smtp.auth:  true
     properties.mail.smtp.starttls.enable: true
 
-mail.smtp.starttls.enable: true
-
-mailto: xyz@gmail.com
-mailFrom: xyz@gmail.com
+mailto: integrationmachinelearning@gmail.com
+mailFrom: integrationmachinelearning@gmail.com
 
 message:   Hello from MOCK Profile
-fromRoute: direct:input
+fromRoute: kafka:inputItemTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
 toRoute: mock:output
 healthRoute: direct:health
 
@@ -50,15 +48,15 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: xyz@gmail.com
-    password:
+    username: integrationmachinelearning@gmail.com
+    password: jqpuqvvlnkducutz
     properties.mail.smtp.auth:  true
     properties.mail.smtp.starttls.enable: true
 
-mailto: xyz@gmail.com
-mailFrom: xyz@gmail.com
+mailto: integrationmachinelearning@gmail.com
+mailFrom: integrationmachinelearning@gmail.com
 message:   Hello from DEV Profile
-fromRoute: timer:health?period=10s
+fromRoute: kafka:inputItemTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
 toRoute:  log:?level=INFO&showBody=true
 healthRoute: timer:health?period=10s
 
@@ -74,16 +72,16 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: xyz@gmail.com
-    password:
+    username: integrationmachinelearning@gmail.com
+    password: jqpuqvvlnkducutz
     properties.mail.smtp.auth:  true
     properties.mail.smtp.starttls.enable: true
 
-mailto: xyz@gmail.com
-mailFrom: xyz@gmail.com
+mailto: integrationmachinelearning@gmail.com
+mailFrom: integrationmachinelearning@gmail.com
 message:    Hello from STAGE Profile
 
-fromRoute: timer:health?period=10s
+fromRoute: kafka:inputItemTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
 toRoute:  log:?level=INFO&showBody=true
 healthRoute: timer:health?period=10s
 
@@ -100,17 +98,16 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: xyz@gmail.com
-    password:
+    username: integrationmachinelearning@gmail.com
+    password: jqpuqvvlnkducutz
     properties.mail.smtp.auth:  true
     properties.mail.smtp.starttls.enable: true
 
-mailto: xyz@gmail.com
-mailFrom: xyz@gmail.com
-
+mailto: integrationmachinelearning@gmail.com
+mailFrom: integrationmachinelearning@gmail.com
 message:    Hello from PROD Profile
 
-fromRoute: timer:health?period=10s
+fromRoute: kafka:inputItemTopic?brokers=localhost:9092&groupId=itemDev&autoOffsetReset=earliest&consumersCount=1
 toRoute:  log:?level=INFO&showBody=true
 healthRoute: timer:health?period=10s
 

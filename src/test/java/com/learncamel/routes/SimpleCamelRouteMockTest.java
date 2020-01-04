@@ -62,4 +62,7 @@ public class SimpleCamelRouteMockTest extends CamelTestSupport{
 
     }
 
+    @Test
+    public void testSomething(){}
+
 }
